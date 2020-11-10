@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>website</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src='images/phone-logo.jpg'>
+
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Anasayfa</a></li>
+                        <li><a href="#">Telefon</a></li>
+                        <li><a href="#">Aksesuarlar</a></li>
+                        <li><a href="#">Kart</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="information">
+                <div class="overlay"></div>
+                <img src='images/mobile.png' class="mobile">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src='images/camera.png'>
+                        <div>
+                            <h1>Kamera</h1>
+                            <p>12MP</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src='images/processor.png'>
+                        <div>
+                            <h1>İşlemci</h1>
+                            <p>Snapgragon</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src='images/display.png'>
+                        <div>
+                            <h1>Boyut</h1>
+                            <p>6.5"</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src='images/battery.png'>
+                        <div>
+                            <h1>Batarya ömrü</h1>
+                            <p>5000 mAh</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="controls">
+                <img src='images/arrow.png' id="upbtn">
+                <h3>Özellikler</h3>
+                <img src='images/arrow.png' id="downbtn">
+
+            </div>
+        </div>
+
+        <script>
+            var circle=document.getElementById("circle");
+            var upbtn=document.getElementById("upbtn");
+            var downbtn=document.getElementById("downbtn");
+
+            var rotatevalue= circle.style.transform;
+            var rotatesum;
+
+            upbtn.onclick= function(){
+                rotatesum = rotatevalue + "rotate(-90deg)";
+                circle.style.transform = rotatesum;
+                rotatevalue = rotatesum;
+            }
+            downbtn.onclick= function(){
+                rotatesum = rotatevalue + "rotate(90deg)";
+                circle.style.transform = rotatesum;
+                rotatevalue = rotatesum;
+            }
+
+        </script>
+
+
+    </body>
+</html>
